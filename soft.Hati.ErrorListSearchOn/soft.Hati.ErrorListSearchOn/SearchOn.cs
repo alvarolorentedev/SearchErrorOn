@@ -6,7 +6,7 @@
 
 using System;
 using System.ComponentModel.Design;
-using System.Globalization;
+using System.Windows.Forms;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -50,9 +50,26 @@ namespace soft.Hati.ErrorListSearchOn
             if (commandService != null)
             {
                 CommandID menuCommandID = new CommandID(MenuGroup, CommandId);
-                EventHandler eventHandler = this.ShowMessageBox;
+                EventHandler eventHandler = SearchOnGoogle;// this.ShowMessageBox;
                 MenuCommand menuItem = new MenuCommand(eventHandler, menuCommandID);
                 commandService.AddCommand(menuItem);
+            }
+        }
+
+        private void SearchOnGoogle(object sender, EventArgs e)
+        {
+            string message = "search selected errors:";
+            var errorList = this.ServiceProvider.GetService(typeof(SVsErrorList)) as IVsTaskList2;
+            IVsEnumTaskItems enumerator;
+            errorList.EnumSelectedItems(out enumerator);
+            var arr = new IVsTaskItem[1];
+            
+            while (enumerator.Next(1, arr, null) == 0)
+            {
+                string text;
+                arr[0].get_Text(out text);
+                message = $"{message}{Environment.NewLine}{text}";
+                Search.Google(message);
             }
         }
 
@@ -83,31 +100,6 @@ namespace soft.Hati.ErrorListSearchOn
         public static void Initialize(Package package)
         {
             Instance = new SearchOn(package);
-        }
-
-        /// <summary>
-        /// Shows a message box when the menu item is clicked.
-        /// </summary>
-        /// <param name="sender">Event sender.</param>
-        /// <param name="e">Event args.</param>
-        private void ShowMessageBox(object sender, EventArgs e)
-        {
-            // Show a Message Box to prove we were here
-            IVsUIShell uiShell = (IVsUIShell)Package.GetGlobalService(typeof(SVsUIShell));
-            Guid clsid = Guid.Empty;
-            int result;
-            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
-                0,
-                ref clsid,
-                "SearchOnPackage",
-                string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName),
-                string.Empty,
-                0,
-                OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
-                OLEMSGICON.OLEMSGICON_INFO,
-                0,        // false
-                out result));
         }
     }
 }
