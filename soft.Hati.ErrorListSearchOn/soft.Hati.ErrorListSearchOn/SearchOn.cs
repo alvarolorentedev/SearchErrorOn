@@ -6,7 +6,6 @@
 
 using System;
 using System.ComponentModel.Design;
-using System.Windows.Forms;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
