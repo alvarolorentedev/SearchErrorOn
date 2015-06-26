@@ -68,8 +68,7 @@ namespace soft.Hati.ErrorListSearchOn
             {
                 string text;
                 arr[0].get_Text(out text);
-                message = string.Format("{0}{1}{2}",message,Environment.NewLine,text);
-                Search.Google(message);
+                Search.Google(text);
             }
         }
 
