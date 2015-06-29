@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchOnPackage.cs" />
     <Compile Include="SearchOnPackageGuids.cs" />
+    <Compile Include="Services\Options\SettingStoreProvider.cs" />
     <Compile Include="Services\Search\SearchEngineManager.cs" />
     <Compile Include="Services\Options\OptionPageGrid.cs">
       <SubType>Component</SubType>

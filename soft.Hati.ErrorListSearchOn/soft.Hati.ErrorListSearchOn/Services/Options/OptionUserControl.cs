@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using soft.Hati.ErrorListSearchOn.Services.Search;
 
 namespace soft.Hati.ErrorListSearchOn.Services.Options
@@ -12,7 +13,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
             InitializeComponent();
         }
 
-        internal OptionPage optionsPage;
+        internal OptionPage OptionsPage;
 
         public void Initialize(SearchEngineManager engineManager)
         {
@@ -22,7 +23,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
             SearchEngineCB.DataSource = new BindingSource(engineManager.Engines, null);
         }
 
-        private void SearchEngineCB_SelectionChangeCommitted(object sender, System.EventArgs e)
+        private void SearchEngineCB_SelectionChangeCommitted(object sender, EventArgs e)
         {
             engineManager.CurrentEngine = (SearchEngine)SearchEngineCB.SelectedValue;
         }

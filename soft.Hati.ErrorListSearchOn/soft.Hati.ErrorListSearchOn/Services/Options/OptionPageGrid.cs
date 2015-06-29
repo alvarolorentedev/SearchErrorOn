@@ -16,8 +16,8 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
         {
             get
             {
-                var page = new OptionUserControl { optionsPage = this };
-                page.optionsPage = this;
+                var page = new OptionUserControl { OptionsPage = this };
+                page.OptionsPage = this;
                 page.Initialize(searchEngineManager);
                 return page;
             }
