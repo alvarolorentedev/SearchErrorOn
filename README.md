@@ -18,6 +18,6 @@ Having trouble with 'Search Error On...'? Any idea of how to improve it?
 Review our [documentation](https://github.com/Hatisoft/SearchErrorOn/wiki) or [add issue/recomendation](https://github.com/Hatisoft/SearchErrorOn/issues) and we’ll sort it out.
 
 ###Build State
-CI: [![Build status](https://ci.appveyor.com/api/projects/status/bg07l4rty5i97fgf/branch/develop?svg=true)](https://ci.appveyor.com/project/kanekotic/errorlistsearchon/branch/develop)
+CI: [![Build status](https://ci.appveyor.com/api/projects/status/3dfrnphpa1l4tlyr?svg=true)](https://ci.appveyor.com/project/kanekotic/searcherroron)
 
-Release: [![Build status](https://ci.appveyor.com/api/projects/status/fa47gaxfp5w5sy48/branch/master?svg=true)](https://ci.appveyor.com/project/kanekotic/errorlistsearchon-qirqb/branch/master)
+Release: [![Build status](https://ci.appveyor.com/api/projects/status/1b25khghlfjq9cho?svg=true)](https://ci.appveyor.com/project/kanekotic/searcherroron-5ibi9)
