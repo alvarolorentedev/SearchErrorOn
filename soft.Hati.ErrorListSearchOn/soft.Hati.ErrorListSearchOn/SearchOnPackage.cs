@@ -10,7 +10,7 @@ namespace soft.Hati.ErrorListSearchOn
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] 
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [Guid(SearchOnPackageGuids.PackageGuidString)]
-    [ProvideOptionPage(typeof(OptionPage), "My Category", "My Grid Page", 0, 0, true)]
+    [ProvideOptionPage(typeof(OptionPage), "Search Error On", "General", 0, 0, true)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     public sealed class SearchOnPackage : Package
     {

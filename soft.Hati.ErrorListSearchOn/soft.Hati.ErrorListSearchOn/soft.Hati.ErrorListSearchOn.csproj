@@ -66,7 +66,7 @@
       <DependentUpon>OptionUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\Search\SearchEngineTypes.cs" />
-    <Compile Include="Services\Search\GoogleSearch.cs" />
+    <Compile Include="Services\Search\SearchEngine.cs" />
     <Compile Include="Services\Search\SearchOn.cs" />
   </ItemGroup>
   <ItemGroup>

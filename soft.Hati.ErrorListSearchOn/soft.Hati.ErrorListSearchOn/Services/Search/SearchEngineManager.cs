@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using soft.Hati.ErrorListSearchOn.Services.Options;
 
 namespace soft.Hati.ErrorListSearchOn.Services.Search
 {
@@ -8,7 +7,8 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
         private static readonly IDictionary<SearchEngineTypes, SearchEngine> engines = new Dictionary<SearchEngineTypes, SearchEngine>
         {
             { SearchEngineTypes.Google, new GoogleSearch() },
-            { SearchEngineTypes.Bing, new BingSearch() }
+            { SearchEngineTypes.Bing, new BingSearch() },
+            { SearchEngineTypes.StackOverflow,  new StackOverflowSearch() }
         };
 
         public SearchEngineManager(SearchEngineTypes type = SearchEngineTypes.Google)

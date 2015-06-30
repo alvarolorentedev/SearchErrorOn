@@ -56,7 +56,7 @@
         <Parent guid="guidSearchOnPackageCmdSet" id="MyMenuGroup" />
         <!--<Icon guid="guidImages" id="bmpPic1" />-->
         <Strings>
-          <ButtonText>Search On Google</ButtonText>
+          <ButtonText>Search Error On...</ButtonText>
         </Strings>
       </Button>
     </Buttons>

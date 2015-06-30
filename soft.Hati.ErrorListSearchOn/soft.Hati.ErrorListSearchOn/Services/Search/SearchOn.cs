@@ -27,15 +27,14 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
             if (commandService != null)
             {
                 CommandID menuCommandID = new CommandID(MenuGroup, CommandId);
-                EventHandler eventHandler = SearchOnGoogle;// this.ShowMessageBox;
+                EventHandler eventHandler = SearchErrorOn;
                 MenuCommand menuItem = new MenuCommand(eventHandler, menuCommandID);
                 commandService.AddCommand(menuItem);
             }
         }
 
-        private void SearchOnGoogle(object sender, EventArgs e)
+        private void SearchErrorOn(object sender, EventArgs e)
         {
-            string message = "search selected errors:";
             var errorList = this.ServiceProvider.GetService(typeof(SVsErrorList)) as IVsTaskList2;
             IVsEnumTaskItems enumerator;
             errorList.EnumSelectedItems(out enumerator);

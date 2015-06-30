@@ -35,7 +35,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 27);
+            this.label1.Location = new System.Drawing.Point(18, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // SearchEngineCB
             // 
             this.SearchEngineCB.FormattingEnabled = true;
-            this.SearchEngineCB.Location = new System.Drawing.Point(126, 18);
+            this.SearchEngineCB.Location = new System.Drawing.Point(125, 27);
             this.SearchEngineCB.Name = "SearchEngineCB";
             this.SearchEngineCB.Size = new System.Drawing.Size(409, 24);
             this.SearchEngineCB.TabIndex = 1;

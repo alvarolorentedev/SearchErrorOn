@@ -3,7 +3,7 @@
     public enum SearchEngineTypes
     {
         Google,
-        Bing
-        //,StackOverflow
+        Bing,
+        StackOverflow
     }
 }
