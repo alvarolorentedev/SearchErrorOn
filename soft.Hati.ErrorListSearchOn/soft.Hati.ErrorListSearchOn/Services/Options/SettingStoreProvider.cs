@@ -16,15 +16,20 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
             userSettingsStore = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
         }
 
-        public string GetValue(string propertyName)
+        public bool Exist(string propertyName)
         {
-            return userSettingsStore.PropertyExists(collection, propertyName) 
-                ? userSettingsStore.GetString(collection, propertyName) 
-                : null;
+            return userSettingsStore.PropertyExists(collection, propertyName);
         }
 
-        public void SetValue(string propertyName, string propertyValue)
+        public string Get(string propertyName)
         {
+            return userSettingsStore.GetString(collection, propertyName);
+        }
+
+        public void Set(string propertyName, string propertyValue)
+        {
+            if (!userSettingsStore.CollectionExists(collection))
+                userSettingsStore.CreateCollection(collection);
             userSettingsStore.SetString(collection, propertyName, propertyValue);
         }
     }

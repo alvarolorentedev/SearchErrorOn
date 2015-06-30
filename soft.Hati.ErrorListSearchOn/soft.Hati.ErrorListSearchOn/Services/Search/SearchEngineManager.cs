@@ -11,6 +11,11 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
             { SearchEngineTypes.Bing, new BingSearch() }
         };
 
+        public SearchEngineManager(SearchEngineTypes type = SearchEngineTypes.Google)
+        {
+            CurrentEngine = engines[type];
+        }
+
         public IDictionary<SearchEngineTypes, SearchEngine> Engines
         {
             get { return engines; }
