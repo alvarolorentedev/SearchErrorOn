@@ -54,7 +54,7 @@
           If you do not want an image next to your command, remove the Icon node /> -->
       <Button guid="guidSearchOnPackageCmdSet" id="SearchOnId" priority="0x0100" type="Button">
         <Parent guid="guidSearchOnPackageCmdSet" id="MyMenuGroup" />
-        <!--<Icon guid="guidImages" id="bmpPic1" />-->
+        <Icon guid="guidImages" id="bmpPicSearch" />
         <Strings>
           <ButtonText>Search Error On...</ButtonText>
         </Strings>
