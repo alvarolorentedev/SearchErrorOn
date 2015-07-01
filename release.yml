@@ -1,4 +1,4 @@
-version: 0.1.{build}.0
+version: 0.1.{build}
 branches:
   only:
   - master
@@ -26,3 +26,12 @@ build:
   verbosity: minimal
 after_test:
 - ps: Vsix-PushArtifacts | Vsix-PublishToGallery
+artifacts:
+- path: soft.Hati.ErrorListSearchOn\soft.Hati.ErrorListSearchOn\bin\Release\soft.Hati.ErrorListSearchOn.vsix
+  name: SearchErrorOn
+deploy:
+- provider: GitHub
+  tag: SearchOn-v$(appveyor_build_version)
+  auth_token:
+    secure: VqQ3kv1hBb9ABOHE2YG5VRBp3UhJZjf7/F+ww/ILd7FA4SUMQVdOJWOYPp0lULQN
+  artifact: /.*\.vsix/
