@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="soft.Hati.ErrorListSearchOn.Hatisoft.1bd7eccb-de09-4d75-b8f8-ce4473d94ac4" Version="1.0" Language="en-US" Publisher="Hatisoft" />
-    <DisplayName>soft.Hati.ErrorListSearchOn</DisplayName>
+    <Identity Id="soft.Hati.ErrorListSearchOn.Hatisoft.1bd7eccb-de09-4d75-b8f8-ce4473d94ac4" Version="1.0" Language="en-US" Publisher="HatiSoft" />
+    <DisplayName>Error Search On</DisplayName>
     <Description xml:space="preserve">Search for error or warnings on your favourite engine</Description>
+    <MoreInfo>http://hatisoft.github.io/SearchErrorOn/</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
+    <Icon>Resources\SearchOnPackage.ico</Icon>
+    <PreviewImage>Resources\SearchOnPreview.png</PreviewImage>
+    <Tags>search, bing, stackoverflow, Google, Error List, Warnings, Errors</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0]" />

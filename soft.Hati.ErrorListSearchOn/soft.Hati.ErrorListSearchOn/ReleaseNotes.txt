@@ -1,0 +1,8 @@
+2/07/2015:
+- Added Icon
+- Basic Functionality is search inside your navigator
+-Ability to configure search engine
+- Can search in:
+	- Google
+	- Bing
+	- StackOverflow
