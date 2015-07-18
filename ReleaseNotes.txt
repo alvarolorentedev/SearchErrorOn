@@ -1,0 +1,13 @@
+18/07/2015:
+- Added Duck Duck Go to search engines
+- Added ability to remove the literals to do general searchs
+3/07/2015:
+- Added compatibility with previous versions of visual studio
+2/07/2015:
+- Added Icon
+- Basic Functionality is search inside your navigator
+-Ability to configure search engine
+- Can search in:
+	- Google
+	- Bing
+	- StackOverflow

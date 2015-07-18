@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="soft.Hati.ErrorListSearchOn.Hatisoft.1bd7eccb-de09-4d75-b8f8-ce4473d94ac4" Version="1.0" Language="en-US" Publisher="HatiSoft" />
+    <Identity Id="soft.Hati.ErrorListSearchOn.Hatisoft.1bd7eccb-de09-4d75-b8f8-ce4473d94ac4" Version="1.0.0" Language="en-US" Publisher="Hati Software" />
     <DisplayName>Search Error On</DisplayName>
     <Description xml:space="preserve">Search for error or warnings on your favourite engine</Description>
     <MoreInfo>http://hatisoft.github.io/SearchErrorOn/</MoreInfo>
