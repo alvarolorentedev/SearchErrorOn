@@ -20,12 +20,12 @@ namespace soft.Hati.ErrorListSearchOn
             base.Initialize();
         }
 
-        public SearchEngineManager EngineManager
+        public SettingsManager SettingsManager
         {
             get
             {
                 var page = (OptionPage)GetDialogPage(typeof(OptionPage));
-                return page.SearchEngineManager;
+                return page.SettingsManager;
             }
         }
     }

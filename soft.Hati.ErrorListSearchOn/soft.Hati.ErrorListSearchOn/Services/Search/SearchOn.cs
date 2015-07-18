@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -43,10 +44,19 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
             
             while (enumerator.Next(1, arr, null) == 0)
             {
-                string text;
-                arr[0].get_Text(out text);
-                package.EngineManager.CurrentEngine.Search(text);
+                
+                string error = ProcessString(arr, package.SettingsManager.GeneralSearch);
+                package.SettingsManager.CurrentEngine.Search(error);
             }
+        }
+
+        private string ProcessString(IVsTaskItem[] arr, bool generalSearch)
+        {
+            string text;
+            arr[0].get_Text(out text);
+            if(generalSearch)
+                text = Regex.Replace(text, "'.*'", "", RegexOptions.IgnoreCase);
+            return text;
         }
 
         public static SearchOn Instance

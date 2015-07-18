@@ -4,6 +4,7 @@
     {
         Google,
         Bing,
-        StackOverflow
+        StackOverflow,
+        DuckDuckGo
     }
 }

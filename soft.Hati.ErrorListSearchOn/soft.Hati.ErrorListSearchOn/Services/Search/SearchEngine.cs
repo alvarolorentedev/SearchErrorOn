@@ -41,4 +41,8 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
         protected override string Url { get { return @"http://stackoverflow.com/search?q="; } }
     }
 
+    public class DuckDuckGo : SearchBase
+    {
+        protected override string Url { get { return @"https://duckduckgo.com/?q="; } }
+    }
 }

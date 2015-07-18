@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.SearchEngineCB = new System.Windows.Forms.ComboBox();
+            this.LiteralsBC = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,10 +51,22 @@
             this.SearchEngineCB.TabIndex = 1;
             this.SearchEngineCB.SelectionChangeCommitted += new System.EventHandler(this.SearchEngineCB_SelectionChangeCommitted);
             // 
+            // LiteralsBC
+            // 
+            this.LiteralsBC.AutoSize = true;
+            this.LiteralsBC.Location = new System.Drawing.Point(125, 74);
+            this.LiteralsBC.Name = "LiteralsBC";
+            this.LiteralsBC.Size = new System.Drawing.Size(299, 21);
+            this.LiteralsBC.TabIndex = 3;
+            this.LiteralsBC.Text = "Removel Literal (search for generic errors)";
+            this.LiteralsBC.UseVisualStyleBackColor = true;
+            this.LiteralsBC.CheckedChanged += new System.EventHandler(this.LiteralsBC_CheckedChanged);
+            // 
             // OptionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LiteralsBC);
             this.Controls.Add(this.SearchEngineCB);
             this.Controls.Add(this.label1);
             this.Name = "OptionUserControl";
@@ -67,5 +80,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox SearchEngineCB;
+        private System.Windows.Forms.CheckBox LiteralsBC;
     }
 }

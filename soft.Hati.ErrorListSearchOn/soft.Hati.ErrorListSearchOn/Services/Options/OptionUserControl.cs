@@ -6,7 +6,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
 {
     public partial class OptionUserControl : UserControl
     {
-        private SearchEngineManager engineManager;
+        private SettingsManager engineManager;
 
         public OptionUserControl()
         {
@@ -15,17 +15,23 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
 
         internal OptionPage OptionsPage;
 
-        public void Initialize(SearchEngineManager engineManager)
+        public void Initialize(SettingsManager settingManager)
         {
-            this.engineManager = engineManager;
+            this.engineManager = settingManager;
             SearchEngineCB.DisplayMember = "Key";
             SearchEngineCB.ValueMember = "Value";
-            SearchEngineCB.DataSource = new BindingSource(engineManager.Engines, null);
+            SearchEngineCB.DataSource = new BindingSource(settingManager.Engines, null);
+            LiteralsBC.Checked = settingManager.GeneralSearch;
         }
 
         private void SearchEngineCB_SelectionChangeCommitted(object sender, EventArgs e)
         {
             engineManager.CurrentEngine = (SearchEngine)SearchEngineCB.SelectedValue;
+        }
+
+        private void LiteralsBC_CheckedChanged(object sender, EventArgs e)
+        {
+            engineManager.GeneralSearch = LiteralsBC.Checked;
         }
     }
 }

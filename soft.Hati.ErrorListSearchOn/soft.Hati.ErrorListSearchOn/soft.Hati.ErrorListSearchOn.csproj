@@ -58,7 +58,7 @@
     <Compile Include="SearchOnPackage.cs" />
     <Compile Include="SearchOnPackageGuids.cs" />
     <Compile Include="Services\Options\SettingStoreProvider.cs" />
-    <Compile Include="Services\Search\SearchEngineManager.cs" />
+    <Compile Include="Services\Search\SettingsManager.cs" />
     <Compile Include="Services\Options\OptionPageGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -212,6 +212,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
