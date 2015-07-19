@@ -21,6 +21,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Options
             SearchEngineCB.DisplayMember = "Key";
             SearchEngineCB.ValueMember = "Value";
             SearchEngineCB.DataSource = new BindingSource(settingManager.Engines, null);
+            SearchEngineCB.SelectedValue = settingManager.CurrentEngine;
             LiteralsBC.Checked = settingManager.GeneralSearch;
         }
 
