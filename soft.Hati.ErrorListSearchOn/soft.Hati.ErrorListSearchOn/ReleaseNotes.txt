@@ -1,3 +1,6 @@
+20/07/2015:
+- allow search on internal browser of Visual studio
+- improved layout of settings
 18/07/2015:
 - Added Duck Duck Go to search engines
 - Added ability to remove the literals to do general searchs

@@ -12,10 +12,11 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
             { SearchEngineTypes.DuckDuckGo, new DuckDuckGo() }
         };
 
-        public SettingsManager(SearchEngineTypes type = SearchEngineTypes.Google, bool generalSearch = false)
+        public SettingsManager(SearchEngineTypes type = SearchEngineTypes.Google, bool generalSearch = false, bool internalBrowser = false)
         {
             CurrentEngine = engines[type];
             GeneralSearch = generalSearch;
+            InternalBrowser = internalBrowser;
         }
 
         public IDictionary<SearchEngineTypes, SearchEngine> Engines
@@ -24,7 +25,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
         }
 
         public bool GeneralSearch { get; set; }
-
+        public bool InternalBrowser { get; set; }
         public SearchEngine CurrentEngine { get; set; }
     }
 }

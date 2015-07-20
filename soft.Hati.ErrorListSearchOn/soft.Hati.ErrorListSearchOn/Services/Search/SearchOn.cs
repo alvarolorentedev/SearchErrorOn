@@ -46,7 +46,8 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
             {
                 
                 string error = ProcessString(arr, package.SettingsManager.GeneralSearch);
-                package.SettingsManager.CurrentEngine.Search(error);
+                var query = package.SettingsManager.CurrentEngine.GenerateQuery(error);
+                BrowserFactory.Create(package.SettingsManager.InternalBrowser).Run(query);
             }
         }
 

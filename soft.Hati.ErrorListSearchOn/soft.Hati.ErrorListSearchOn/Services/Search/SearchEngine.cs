@@ -7,6 +7,7 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
     public interface SearchEngine
     {
         void Search(string query);
+        string GenerateQuery(string info);
     }
 
     public abstract class SearchBase : SearchEngine
@@ -23,6 +24,14 @@ namespace soft.Hati.ErrorListSearchOn.Services.Search
                 Process.Start(string.Format("{0}{1}", Url, query));
             }
             catch { }
+        }
+
+        public string GenerateQuery(string info)
+        {
+            info = info.Replace(' ', '+');
+            var notExpectedChars = info.ToList().Where(character => (character != '+' && !char.IsLetterOrDigit(character)));
+            notExpectedChars.ToList().ForEach(character => info = info.Replace(string.Format("{0}", character), Uri.HexEscape(character)));
+            return string.Format("{0}{1}", Url, info);
         }
     }
 

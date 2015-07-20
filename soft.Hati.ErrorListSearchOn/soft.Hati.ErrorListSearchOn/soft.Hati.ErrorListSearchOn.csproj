@@ -58,6 +58,7 @@
     <Compile Include="SearchOnPackage.cs" />
     <Compile Include="SearchOnPackageGuids.cs" />
     <Compile Include="Services\Options\SettingStoreProvider.cs" />
+    <Compile Include="Services\Search\Browser.cs" />
     <Compile Include="Services\Search\SettingsManager.cs" />
     <Compile Include="Services\Options\OptionPageGrid.cs">
       <SubType>Component</SubType>
@@ -74,7 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
