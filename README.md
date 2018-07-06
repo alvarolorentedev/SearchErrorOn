@@ -1,6 +1,7 @@
-# ErrorListSearchOn
+# ![searchonheader](https://user-images.githubusercontent.com/3071208/42362398-5bb7dee6-80f3-11e8-9ecc-56dcc2bdda97.png)
 
 [![Join the chat at https://gitter.im/Hatisoft/SearchErrorOn](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Hatisoft/SearchErrorOn?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This plugin for visual studio has been created to be able to find the errors generated during compilation time on your favourite web browser.
 
 ### Use
